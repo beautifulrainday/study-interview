@@ -1,0 +1,26 @@
+先看看有没有遗留的卸了
+whereis nginx
+根据的路径删了
+
+用centos对应的yum指令卸载干净
+yum remove nginx
+
+重新安装
+yum install nginx
+waiting...
+
+待验证
+PID目录：/var/run/nginx.pid
+错误日志：/var/log/nginx/error.log
+访问日志：/var/log/nginx/access.log	?
+
+启动、停止、重载命令
+systemctl start nginx.service
+systemctl stop nginx.service
+systemctl reload nginx.service
+systemctl status nginx.service
+
+
+netstat -antp | grep :80
+lsof -i:80
+kill -pid
